@@ -1,14 +1,14 @@
 // move_semantics5.rs
-// Make me compile without adding, removing, or changing any of the
-// lines in `main()`.
-// Execute `rustlings hint move_semantics5` for hints :)
+// Make me compile only by reordering the lines in `main()`, but without
+// adding, changing or removing any of them.
+// Execute `rustlings hint move_semantics5` or use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
 
 fn main() {
     let mut x = 100;
     let y = &mut x;
-    let z = &mut *y;
+    let z = &mut x;
     *y += 100;
     *z += 1000;
     assert_eq!(x, 1200);
